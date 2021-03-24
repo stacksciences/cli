@@ -1,5 +1,5 @@
 all:
-	go build
+	go build -o stctl
 
 clean:
 	rm -rf stctl
