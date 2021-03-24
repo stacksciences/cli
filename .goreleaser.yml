@@ -4,7 +4,7 @@ project_name: stctl
 release:
   github:
     owner: stacksciences 
-    name: stctl
+    name: cli
 
 builds:
   - main : ./
