@@ -43,6 +43,7 @@ func init() {
 	cobra.OnInitialize(initConfig)
 
 	rootCmd.AddCommand(clusterCmd)
+	rootCmd.AddCommand(versionCmd)
 	rootCmd.PersistentFlags().StringVar(&cfgFile, "config", "", "config file (default is $HOME/.stctl/config)")
 	rootCmd.PersistentFlags().StringVar(&token, "token", "", "Platform authentication token")
 	rootCmd.PersistentFlags().StringVar(&hostname, "platform", "", "Platform hostname")
