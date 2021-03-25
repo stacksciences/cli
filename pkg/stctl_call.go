@@ -28,7 +28,7 @@ func (ctx *Ctx) api_call(api_url, action string, payload interface{}, response i
 	}
 
 	req.Header.Set("Content-Type", "application/json")
-	req.Header.Set("x-stack-token", ctx.PlatformToken)
+	req.Header.Set("X-Api-Key", ctx.PlatformToken)
 
 	transCfg := &http.Transport{
 		TLSClientConfig: &tls.Config{InsecureSkipVerify: true}, // ignore expired SSL certificates
