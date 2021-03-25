@@ -60,13 +60,15 @@ func (ctx *Ctx) ClusterList() ([]string, error) {
 
 		timestamp, err := strconv.ParseInt(cluster.LastScan.Timestamp, 0, 64)
 		if err != nil {
-			return nil, fmt.Errorf("invalid last scan timestamp format")
+			fmt.Printf("Cluster: %s - %s - never scanned\n", cluster.Meta.Name, cluster.LastScan.Version)
+			continue
 		}
 
 		scanTime := time.Unix(timestamp, 0).UTC()
 
 		if timestamp == 0 {
 			fmt.Printf("Cluster: %s - %s - never scanned\n", cluster.Meta.Name, cluster.LastScan.Version)
+			continue
 		}
 
 		fmt.Printf("Cluster: %s - (Version: %s grade: %s - %s)\n", cluster.Meta.Name, cluster.LastScan.Version, cluster.LastScan.Grade, scanTime)
