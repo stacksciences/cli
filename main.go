@@ -1,7 +1,7 @@
 package main
 
 import (
-	"stctl/cmd"
+	"stsc.dev/cli/cmd"
 )
 
 func main() {
