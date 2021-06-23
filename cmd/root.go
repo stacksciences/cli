@@ -2,7 +2,7 @@ package cmd
 
 import (
 	"fmt"
-	stctl "stctl/pkg"
+	stctl "stsc.dev/cli/pkg"
 
 	"github.com/mitchellh/go-homedir"
 	"github.com/spf13/cobra"
