@@ -1,4 +1,4 @@
-module stctl
+module stsc.dev/cli
 
 go 1.15
 
